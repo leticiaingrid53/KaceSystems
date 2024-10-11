@@ -24,6 +24,7 @@ Para login é necessário que o usuário seja administrador
 Para realizar a criação de um ticket é utilizada a api /api/service_desk/tickets
 
 Syntax:
+
 • Type: POST
 • URL: {host}/api/service_desk/tickets
 • Headers:
@@ -41,7 +42,7 @@ Syntax:
 ]
 }
 
-///////////////////////////////////////////////////////////////////////////////////////
+
 Exemplo de como chamar a api no fluig com autentização Bearer
 
 			var obtertoken = "";
@@ -94,15 +95,21 @@ Exemplo de como chamar a api no fluig com autentização Bearer
 					console.error("ERRO: resposta do ajax: ", a, e, T);
 				}
 			});
-   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
    Teste via console
    
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
+
    // Função assíncrona para realizar as solicitações
-async function fetchData() {
+   
+  async function fetchData() {
+  
   // URL para autenticação
+  
   const loginUrl = "https://suporte.reframax.com.br/ams/shared/api/security/login";
  
   // Payload com as credenciais de login
+  
   const payload = {
     userName: "usuariokace",
     password: "senhakace",
@@ -110,6 +117,7 @@ async function fetchData() {
   };
  
   // Cabeçalhos da requisição POST
+  
   const headers = {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
@@ -117,7 +125,9 @@ async function fetchData() {
   };
  
   try {
+  
     // Requisição POST para autenticação
+    
     const response = await fetch(loginUrl, {
       method: 'POST',
       headers: headers,
